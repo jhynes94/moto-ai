@@ -5,8 +5,8 @@ import { getEvents } from "@/app/api/events/getEvents";
 const GetEvents = () => {
 	const [events, setEvents] = useState(null);
 
-	const fetchEvents = async () => {
-		const response = await getEvents({ searchParameters: "search parameters" });
+	async function fetchEvents() {
+		const response = await getEvents({ query: "Motorcycle track days June 2025 Issaquah Washington" });
 		setEvents(response);
 	};
 

@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
 
 // Function to query DeepSeek API
@@ -36,6 +35,7 @@ export const getTrackDaysFromDeepSeek = async (query) => {
     // Print the formatted track day results
     console.log("\nTrack Day Results from DeepSeek:\n");
     console.log(data.choices[0].message.content);
+    return data.choices[0].message.content;
 
   } catch (error) {
     console.error("Error calling DeepSeek:", error.message);
